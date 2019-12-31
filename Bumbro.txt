@@ -1,0 +1,123 @@
+HoldingsComponent---
+
+
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-holdings',
+  templateUrl: './holdings.component.html',
+  styleUrls: ['./holdings.component.css']
+})
+export class HoldingsComponent implements OnInit {
+  securityHolding = [];
+  liquidFundHolding = [];
+  ratingWeighs = [];
+  industryWeighs = [];
+  concentration = [];
+  constructor() {
+    this.concentration = [{
+      Key: 'Total',
+      Amount: 20000000,
+      Weighs: '100 %'
+    },
+    {
+      Key: 'Security',
+      Amount: 15000000,
+      Weighs: '80 %'
+    }, {
+      Key: 'Liquid Fund',
+      Amount: 20000000,
+      Weighs: '20 %'
+    }];
+    this.industryWeighs = [{
+      Key : 'Finance',
+      Value : '20%'
+    },{
+      Key : 'IT',
+      Value : '20%'
+    },{
+      Key : 'Automobiles',
+      Value : '20%'
+    },{
+      Key : 'Finance',
+      Value : '20%'
+    }];
+    this.ratingWeighs = [{
+      Key : 'AAA',
+      Value : '30%'
+    },{
+      Key : 'AA+',
+      Value : '30%'
+    },{
+      Key : 'AA',
+      Value : '15%'
+    },{
+      Key : 'AA-',
+      Value : '25%'
+    }];
+    this.securityHolding = [
+      {
+        Security : '',
+        Holding : '',
+        UnitCost : '',
+        CleanPrice : '',
+        DirtyPrice : '',
+        AccruedInterest : ''
+      },{
+        Security : '',
+        Holding : '',
+        UnitCost : '',
+        CleanPrice : '',
+        DirtyPrice : '',
+        AccruedInterest : ''
+      },{
+        Security : '',
+        Holding : '',
+        UnitCost : '',
+        CleanPrice : '',
+        DirtyPrice : '',
+        AccruedInterest : ''
+      },{
+        Security : '',
+        Holding : '',
+        UnitCost : '',
+        CleanPrice : '',
+        DirtyPrice : '',
+        AccruedInterest : ''
+      }
+    ];
+    this.liquidFundHolding = [
+      {
+        Scheme : '',
+        Holding : '',
+        NAV : '',
+        CostPrice : '',
+        CurrentValue : ''
+        
+      },{
+        Scheme : '',
+        Holding : '',
+        NAV : '',
+        CostPrice : '',
+        CurrentValue : ''
+      },{
+        Scheme : '',
+        Holding : '',
+        NAV : '',
+        CostPrice : '',
+        CurrentValue : ''
+      },{
+        Scheme : '',
+        Holding : '',
+        NAV : '',
+        CostPrice : '',
+        CurrentValue : ''
+      }
+    ]
+  }
+
+  ngOnInit() {
+  }
+
+
+}
